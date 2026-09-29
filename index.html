@@ -53,7 +53,11 @@
       }
       #unity-container:fullscreen #unity-canvas {
         width: 100vw !important;
-        height: calc(100vh - 38px) !important; /* Preserves your bottom footer */
+        height: 100vh !important;
+      }
+
+      #unity-container:fullscreen #unity-footer {
+        display: none !important;
       }
     </style>
   </head>
@@ -113,8 +117,6 @@
         productName: "Tag",
         productVersion: "1.4",
         showBanner: unityShowBanner,
-        
-        /* 🚨 THE FULLSCREEN FIX: Tells Unity to scale the game canvas dynamically with the browser window size */
         matchWebGLToCanvasSize: true,
       };
 
@@ -141,9 +143,19 @@
             loadingContainer.style.display = "none";
           }
         }).then((unityInstance) => {
+          // Normal button click
           document.querySelector("#unity-fullscreen-button").onclick = () => {
             unityInstance.SetFullscreen(1);
           };
+
+          // NEW F11 KEYBOARD LISTENER FIX
+          window.addEventListener("keydown", (e) => {
+            if (e.key === "F11") {
+              e.preventDefault(); // Stop browser default F11 bug
+              unityInstance.SetFullscreen(1); // Force custom Unity clean scale
+            }
+          });
+
         }).catch((message) => {
           alert(message);
         });
