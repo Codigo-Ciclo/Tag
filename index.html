@@ -43,19 +43,17 @@
       }
 
       /* FORCED FULLSCREEN STRETCH FIX */
-      /* This tracks the container when maximized and tells the canvas inside to obey */
-      .unity-desktop:fullscreen {
+      #unity-container:fullscreen {
         width: 100vw !important;
         height: 100vh !important;
       }
-      .unity-desktop:fullscreen #unity-fullscreen-container {
+      #unity-container:fullscreen #unity-fullscreen-container {
         width: 100vw !important;
         height: 100vh !important;
       }
-      .unity-desktop:fullscreen #unity-canvas {
+      #unity-container:fullscreen #unity-canvas {
         width: 100vw !important;
         height: calc(100vh - 38px) !important; /* Preserves your bottom footer */
-        object-fit: contain !important; /* Prevents pixels from stretching wonky */
       }
     </style>
   </head>
@@ -82,7 +80,6 @@
     <script>
       let canvas = document.querySelector("#unity-canvas");
       let fullscreenContainer = document.querySelector("#unity-fullscreen-container");
-      let unityContainer = document.querySelector("#unity-container");
 
       function unityShowBanner(msg, type) {
         var warningBanner = document.querySelector("#unity-warning");
@@ -111,11 +108,14 @@
         frameworkUrl: buildUrl + "/docs.framework.js",
         codeUrl: buildUrl + "/docs.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        fullscreenElementID: "unity-container", /* CHANGED TO PARENT CONTAINER FOR FULL WRAP */
+        fullscreenElementID: "unity-container", 
         companyName: "Codigo Ciclo",
         productName: "Tag",
         productVersion: "1.4",
         showBanner: unityShowBanner,
+        
+        /* 🚨 THE FULLSCREEN FIX: Tells Unity to scale the game canvas dynamically with the browser window size */
+        matchWebGLToCanvasSize: true,
       };
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
