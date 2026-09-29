@@ -56,8 +56,12 @@
         height: 100vh !important;
       }
 
+      /* Completely removes the footer element from layout calculation in fullscreen */
       #unity-container:fullscreen #unity-footer {
         display: none !important;
+        height: 0px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
       }
     </style>
   </head>
@@ -84,6 +88,7 @@
     <script>
       let canvas = document.querySelector("#unity-canvas");
       let fullscreenContainer = document.querySelector("#unity-fullscreen-container");
+      let unityContainer = document.querySelector("#unity-container");
 
       function unityShowBanner(msg, type) {
         var warningBanner = document.querySelector("#unity-warning");
@@ -143,16 +148,29 @@
             loadingContainer.style.display = "none";
           }
         }).then((unityInstance) => {
-          // Normal button click
+          
+          // Secure layout tracking function
+          function toggleFullscreenMode() {
+            if (!document.fullscreenElement) {
+              unityContainer.requestFullscreen().catch(err => {
+                // If browser blocks direct request, fall back cleanly to Unity API
+                unityInstance.SetFullscreen(1);
+              });
+            } else {
+              document.exitFullscreen();
+            }
+          }
+
+          // Blue Button click mapping
           document.querySelector("#unity-fullscreen-button").onclick = () => {
-            unityInstance.SetFullscreen(1);
+            toggleFullscreenMode();
           };
 
-          // NEW F11 KEYBOARD LISTENER FIX
+          // FIXED KEYBOARD LISTENER BIND: Catches F11 securely inside the canvas context
           window.addEventListener("keydown", (e) => {
             if (e.key === "F11") {
-              e.preventDefault(); // Stop browser default F11 bug
-              unityInstance.SetFullscreen(1); // Force custom Unity clean scale
+              e.preventDefault(); 
+              toggleFullscreenMode(); 
             }
           });
 
