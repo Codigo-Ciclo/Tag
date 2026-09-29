@@ -7,39 +7,56 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <style>
-      /* FORCED DEAD CENTER FIX */
+      /* FORCED ABSOLUTE CENTERING OVERRIDE */
       html, body {
         background-color: #111116 !important;
         margin: 0 !important;
         padding: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
         overflow: hidden !important;
       }
       
       #unity-container.unity-desktop {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        transform: none !important;
-        margin: 0 auto !important;
-        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.7) !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        width: 960px !important;
+        height: 578px !important; 
+        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.8) !important;
         display: block !important;
       }
 
       #unity-fullscreen-container {
         width: 960px !important;
-        height: 578px !important; /* Extra 38px includes the footer nicely */
+        height: 578px !important;
         position: relative !important;
       }
 
+      /* NATIVE RESOLUTION: Standard browser viewport layout size */
       #unity-canvas {
         width: 960px !important;
         height: 540px !important;
         display: block !important;
+      }
+
+      /* RESPONSIVE FULLSCREEN RESOLUTION OVERRIDE */
+      /* This breaks the 960x540 pixel rule only when maximizing layout views */
+      #unity-fullscreen-container:fullscreen,
+      #unity-fullscreen-container:-webkit-full-screen,
+      #unity-fullscreen-container:-moz-full-screen {
+        width: 100vw !important;
+        height: 100vh !important;
+      }
+
+      #unity-fullscreen-container:fullscreen #unity-canvas,
+      #unity-fullscreen-container:-webkit-full-screen #unity-canvas,
+      #unity-fullscreen-container:-moz-full-screen #unity-canvas {
+        width: 100vw !important;
+        height: calc(100vh - 38px) !important; /* Preserves layout footer row */
+        object-fit: contain !important; /* Locks scaling layout ratios cleanly */
       }
     </style>
   </head>
