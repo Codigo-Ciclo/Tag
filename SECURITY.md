@@ -11,7 +11,7 @@ Please only report security issues found in the latest official release of the g
 | Version | Supported          |
 | ------- | ------------------ |
 | Latest Release |  Yes |
-| Older Versions | ❌ No              |
+| Older Versions | No              |
 
 ---
 
