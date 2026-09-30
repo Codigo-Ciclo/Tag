@@ -1,0 +1,23 @@
+name: 🚨 Code of Conduct Report
+about: Report a violation of the Citizen Code of Conduct for Tag.
+title: "[CoC Report]: "
+labels: ["moderation", "urgent"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚠️ WARNING: THIS ISSUE IS PUBLIC
+        If your report contains sensitive or private information and you do not feel safe posting it publicly, please stop and use the **Security -> Report a vulnerability** tab instead to keep it entirely private.
+  - type: textarea
+    id: incident-description
+    attributes:
+      label: Description of the Incident
+      placeholder: Please describe what happened. Include links to comments or pull requests if applicable.
+    validations:
+      required: true
+  - type: input
+    id: offender
+    attributes:
+      label: Username of the individual(s) involved
+    validations:
+      required: true
