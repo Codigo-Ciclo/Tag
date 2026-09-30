@@ -1,20 +1,18 @@
 # Tag
 
 [![Unity Version](https://shields.io)](https://unity.com)
-[![Platform](https://shields.io)]()
-[![Players](https://shields.io)]()
 
-**Tag** is a fast-paced local multiplayer game where you can challenge your friends to the ultimate game of chase. Dash across the arena, evade the catcher, and grab game-changing power-ups to escape or corner your opponents!
+**Tag** is a fast-paced local multiplayer game where you can challenge your friends to the ultimate game of chase. Run around the map, evade the tagger, and grab power-ups to escape or corner your opponents!
 
 ---
 
-## 🚀 Features
+## Features
 
-*   **Up to 4-Player Local Chaos:** Gather your friends around a single keyboard for intense multiplayer action.
-*   **Standard Chase Mechanics:** Classic, easy-to-understand rules—run from "It" or catch the runners before time runs out.
+*   **Up to 4-Player Locally:** Gather your friends around a single keyboard for multiplayer playability.
+*   **Standard Chase Mechanics:** Classic, easy-to-understand rules—run from the **Tagger** or catch the runners before time runs out.
 *   **Dynamic Power-Ups:** Collect special items scattered across the map to boost your speed or gain the upper hand.
 
-## 🎮 Controls
+## Controls
 
 The game supports up to **4 players on a single keyboard**. Find your setup below:
 
@@ -25,30 +23,27 @@ The game supports up to **4 players on a single keyboard**. Find your setup belo
 | **Player 3** | `T` `F` `G` `H` |
 | **Player 4** | `I` `J` `K` `L` |
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 *   **Game Engine:** [Unity](https://unity.com)
 *   **Language:** C#
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 You can jump straight into the action without setting up a development environment:
 
 1. Look at the **About panel** on the right side of this GitHub repository page.
 2. Click the installation link provided there to download or play the game build directly.
 
-## 📺 Demo
+[<img width="775" height="434" alt="Screenshot 2026-09-30 082608" src="https://github.com/user-attachments/assets/bc7c8bf5-bda2-4406-96a9-2cdb1d8be727" />
+]
 
-[INSERT YOUR DEMO VIDEO / GIF / LINK HERE]
-
----
-
-## 🤝 Contributing
-
-Contributions, bug reports, and feature suggestions are welcome! 
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Version Information
+* 1.1 - Fixed Player Input Bugs
+* 1.2 - Added City and Volcano Map
+* 1.3 - Added Control Panel
+* 1.4 - Made Controls Changeable
+* 1.5 - Added Map Selection Button To Pause and Lose Screens
+* 1.6 - Fixed Looping in Forest Map and Fixed Tag Percentage
+* 1.7 - Fixed Spawn Positions
+* 1.8 - Fixed Mushroom Bugs
