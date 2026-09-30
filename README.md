@@ -19,7 +19,7 @@ The game supports up to **4 players on a single keyboard**. Find your setup belo
 | Player | Movement Keys |
 | :--- | :--- |
 | **Player 1** | `W` `A` `S` `D` |
-| **Player 2** | `Arrow Keys` (`↑` `↓` `←` `→`) |
+| **Player 2** | `↑` `↓` `←` `→` |
 | **Player 3** | `I` `J` `K` `L` |
 | **Player 4** | `T` `F` `G` `H` |
 
