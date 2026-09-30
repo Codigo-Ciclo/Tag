@@ -23,13 +23,13 @@ The following behaviors are considered harassment and are strictly prohibited wi
 ## 4. Reporting Guidelines
 If you experience or witness behavior that violates this Code of Conduct, please report it immediately using one of the two native GitHub methods below. Because I am a solo developer, I will personally review every report.
 
-### 🛡️ Option 1: Private Report (Recommended)
+### Option 1: Private Report (Recommended)
 If your report contains sensitive information or you do not feel comfortable posting publicly:
 1. Click the **Security** tab at the top of this GitHub repository.
 2. Click **Report a vulnerability** on the left sidebar.
 3. Fill out the form. This report goes **directly and privately** to me and cannot be seen by the public or the offender.
 
-### 🚨 Option 2: Public Issue Tab
+### Option 2: Public Issue Tab
 If the situation is public and you want to flag it immediately:
 1. Go to the **Issues** tab and click **New Issue**.
 2. Select the **Code of Conduct Report** template.
