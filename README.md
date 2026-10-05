@@ -49,3 +49,4 @@ You can jump straight into the action without setting up a development environme
 * 1.8 - Fixed Mushroom Bugs
 * 1.9 - Adjusted How One Way Platforms Work
 * 2.0 - Added The Ice Map
+* 2.1 - Fixed Web Loading Error
