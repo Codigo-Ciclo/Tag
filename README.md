@@ -40,10 +40,13 @@ You can jump straight into the action without setting up a development environme
 
 ## Version Information
 * 1.1 - Fixed Player Input Bugs
-* 1.2 - Added City and Volcano Map
+* 1.2 - Added City And Volcano Map
 * 1.3 - Added Control Panel
 * 1.4 - Made Controls Changeable
 * 1.5 - Added Map Selection Button To Pause and Lose Screens
-* 1.6 - Fixed Looping in Forest Map and Fixed Tag Percentage
+* 1.6 - Fixed Looping In Forest Map And Fixed Tag Percentage
 * 1.7 - Fixed Spawn Positions
 * 1.8 - Fixed Mushroom Bugs
+* 1.9 - Adjusted How One Way Platforms Work
+* 2.0 - Added The Ice Map
+* 2.1 - Fixed Web Loading Error
